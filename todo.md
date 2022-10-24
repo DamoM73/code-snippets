@@ -1,4 +1,6 @@
-- [] Files
-    - [] Text Files
-    - [] Opening Text Files
-    - [] Read Text Files
+- [ ] Lists
+    - [ ] getting random list element
+- [ ] Files
+    - [ ] Text Files
+    - [ ] Opening Text Files
+    - [ ] Read Text Files
