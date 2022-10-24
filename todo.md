@@ -1,9 +1,4 @@
-# Files
-
-## Text Files
-
-
-### Opening Text Files
-
-
-### Read Text Files
+- [] Files
+    - [] Text Files
+    - [] Opening Text Files
+    - [] Read Text Files
