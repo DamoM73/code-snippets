@@ -24,7 +24,8 @@ exclude_patterns = ['_build',
                     '.venv',
                     'README.md',
                     'teacher_resources',
-                    'notes.md'
+                    'notes.md',
+                    'todo.md'
                     ]
 
 
@@ -34,9 +35,9 @@ exclude_patterns = ['_build',
 
 html_theme = 'furo'
 html_static_path = ['_static']
-html_logo = 'logo.png'
-html_title = "A Turtle Introduction to Python"
-html_favicon = "logo.ico"
+html_logo = 'snippets_logo.png'
+html_title = "Python Code Snippets"
+html_favicon = "snippets_logo.ico"
 
 html_theme_options = {
     "footer_icons": [
