@@ -3,7 +3,7 @@
 This website provides a selection of code snippets to incorporate into your Python code.
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 1
 :caption: "Contents:"
 
 introduction
