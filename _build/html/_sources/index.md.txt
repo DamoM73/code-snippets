@@ -7,6 +7,7 @@ This website provides a selection of code snippets to incorporate into your Pyth
 :caption: "Contents:"
 
 introduction
+strings
 debugging
 licencing
 ```
