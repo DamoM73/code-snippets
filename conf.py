@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'A Turtle Introduction to Python'
+project = 'Python Code Snippets'
 copyright = '2023, Damien Murtagh'
 author = 'Damien Murtagh'
 
