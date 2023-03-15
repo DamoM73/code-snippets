@@ -8,6 +8,7 @@ This website provides a selection of code snippets to incorporate into your Pyth
 
 introduction
 strings
+file_handling
 debugging
 licencing
 ```
