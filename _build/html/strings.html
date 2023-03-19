@@ -225,24 +225,64 @@
 <tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">swapcase()</span></code></p></td>
 <td class="text-left"><p>Swaps cases, lower case becomes upper case and vice versa</p></td>
 </tr>
-<tr class="row-odd"><td class="text-left"><p>title()	Converts the first character of each word to upper case</p></td>
-<td class="text-left"><p></p></td>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">title()</span></code></p></td>
+<td class="text-left"><p>Converts the first character of each word to upper case</p></td>
 </tr>
-<tr class="row-even"><td class="text-left"><p>translate()	Returns a translated string</p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-odd"><td class="text-left"><p>upper()	Converts a string into upper case</p></td>
-<td class="text-left"><p></p></td>
-</tr>
-<tr class="row-even"><td class="text-left"><p>zfill()	Fills the string with a specified number of 0 values at the beginning</p></td>
-<td class="text-left"><p></p></td>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">upper()</span></code></p></td>
+<td class="text-left"><p>Converts a string into upper case</p></td>
 </tr>
 </tbody>
 </table>
 </div>
-<p>casefold()	Converts string into lower case
-center()	Returns a centered string
-count()	Returns the number of times a specified value occurs in a string
+<p>Try them out with this code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sample</span> <span class="o">=</span> <span class="s2">&quot;a long time Ago in a Galaxy far far away&quot;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">capitalize</span><span class="p">())</span>
+<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="linenos">5</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">swapcase</span><span class="p">())</span>
+<span class="linenos">6</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">title</span><span class="p">())</span>
+<span class="linenos">7</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">upper</span><span class="p">())</span>
+</pre></div>
+</div>
+</section>
+<section id="questioning-properties">
+<h3>Questioning properties<a class="headerlink" href="#questioning-properties" title="Permalink to this heading">#</a></h3>
+</section>
+<section id="justification">
+<h3>Justification<a class="headerlink" href="#justification" title="Permalink to this heading">#</a></h3>
+<p>Justification adds ‘padding’ characters to a string so it becomes a set length.</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Method</p></th>
+<th class="head text-left"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">center()</span></code></p></td>
+<td class="text-left"><p>Will center align the string, using a specified character (space is default) as the fill character.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">ljust()</span></code></p></td>
+<td class="text-left"><p>Will left align the string, using a specified character (space is default) as the fill character.</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">rjust()</span></code></p></td>
+<td class="text-left"><p>Will right align the string, using a specified character (space is default) as the fill character.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Try them out with this code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sample</span> <span class="o">=</span> <span class="s2">&quot;word&quot;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">center</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">))</span>
+<span class="linenos">5</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="linenos">6</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">ljust</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;_&quot;</span><span class="p">))</span>
+<span class="linenos">7</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+<span class="linenos">8</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;_&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>count()	Returns the number of times a specified value occurs in a string
 encode()	Returns an encoded version of the string
 endswith()	Returns true if the string ends with the specified value
 expandtabs()	Sets the tab size of the string
@@ -263,21 +303,21 @@ isspace()	Returns True if all characters in the string are whitespaces
 istitle()	Returns True if the string follows the rules of a title
 isupper()	Returns True if all characters in the string are upper case
 join()	Converts the elements of an iterable into a string
-ljust()	Returns a left justified version of the string
 lstrip()	Returns a left trim version of the string
 maketrans()	Returns a translation table to be used in translations
 partition()	Returns a tuple where the string is parted into three parts
 replace()	Returns a string where a specified value is replaced with a specified value
 rfind()	Searches the string for a specified value and returns the last position of where it was found
 rindex()	Searches the string for a specified value and returns the last position of where it was found
-rjust()	Returns a right justified version of the string
 rpartition()	Returns a tuple where the string is parted into three parts
 rsplit()	Splits the string at the specified separator, and returns a list
 rstrip()	Returns a right trim version of the string
 split()	Splits the string at the specified separator, and returns a list
 splitlines()	Splits the string at line breaks and returns a list
 startswith()	Returns true if the string starts with the specified value
-strip()	Returns a trimmed version of the string</p>
+strip()	Returns a trimmed version of the string
+translate()	Returns a translated string
+zfill()	Fills the string with a specified number of 0 values at the beginning</p>
 </section>
 </section>
 </section>
@@ -347,6 +387,8 @@ strip()	Returns a trimmed version of the string</p>
 <li><a class="reference internal" href="#">Strings</a><ul>
 <li><a class="reference internal" href="#string-methods">String methods</a><ul>
 <li><a class="reference internal" href="#changing-case">Changing case</a></li>
+<li><a class="reference internal" href="#questioning-properties">Questioning properties</a></li>
+<li><a class="reference internal" href="#justification">Justification</a></li>
 </ul>
 </li>
 </ul>
