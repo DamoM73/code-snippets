@@ -1,8 +1,8 @@
 # Strings
 
-## String methods
+## String Methods
 
-### Changing case
+### Changing Case Methods
 
 Method for changing character cases:
 
@@ -20,7 +20,7 @@ Try them out with this code:
 :linenos:
 ```
 
-### Substring methods
+### Substring Methods
 
 These methods return information about substrings in the string
 
@@ -65,7 +65,7 @@ Try them out with this code:
 :linenos:
 ```
 
-### Justification
+### String Justification Methods
 
 Justification adds 'padding' characters to a string so it becomes a set length.
 
@@ -81,7 +81,7 @@ Try them out with this code:
 :linenos:
 ```
 
-### Modify string
+### String Modification Methods
 
 These methods will modify a string
 
