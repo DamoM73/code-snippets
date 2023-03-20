@@ -20,9 +20,50 @@ Try them out with this code:
 :linenos:
 ```
 
-### Questioning properties
+### Substring methods
 
+These methods return information about substrings in the string
 
+| Method | Purpose |
+|:------ | :------ |
+|`count()`|Returns the number of times a specified value occurs in a string|
+|`find()`|Searches the string for a specified value and returns the position of where it was found|
+|`index()`|Searches the string for a specified value and returns the position of where it was found|
+|`rfind()`|Searches the string for a specified value and returns the last position of where it was found|
+|`rindex()`|Searches the string for a specified value and returns the last position of where it was found|
+
+Try them out with this code:
+
+```{literalinclude} ./python_files/string_substring.py
+:linenos:
+```
+
+### String Comparison Methods
+
+These methods evaluate a string and return a Boolean value
+
+| Method | Purpose |
+|:------ | :------ |
+|`endswith()`|Returns true if the string ends with the specified value|
+|`isalnum()`|Returns True if all characters in the string are alphanumeric|
+|`isalpha()`|Returns True if all characters in the string are in the alphabet|
+|`isascii()`|Returns True if all characters in the string are ascii characters|
+|`isdecimal()`|Returns True if all characters in the string are ASCII decimals|
+|`isdigit()`|Returns True if all characters in the string are digits|
+|`isidentifier()`|Returns True if the string is an valid variable name|
+|`islower()`|Returns True if all characters in the string are lower case|
+|``isnumeric()`|Returns True if all characters in the string can be used as numbers such as digits, fractions, subscripts, superscripts, Roman numerals, currency numerators etc.|
+|`isprintable()`|Returns True if all characters in the string are printable|
+|`isspace()`|Returns True if all characters in the string are whitespaces|
+|`istitle()`|Returns True if the string follows the rules of a title|
+|`isupper()`|Returns True if all characters in the string are upper case|
+|`startswith()`|Returns true if the string starts with the specified value|
+
+Try them out with this code:
+
+```{literalinclude} ./python_files/string_comparison.py
+:linenos:
+```
 
 ### Justification
 
@@ -40,41 +81,23 @@ Try them out with this code:
 :linenos:
 ```
 
+### Modify string
 
+These methods will modify a string
 
-count()	Returns the number of times a specified value occurs in a string
-encode()	Returns an encoded version of the string
-endswith()	Returns true if the string ends with the specified value
-expandtabs()	Sets the tab size of the string
-find()	Searches the string for a specified value and returns the position of where it was found
-format()	Formats specified values in a string
-format_map()	Formats specified values in a string
-index()	Searches the string for a specified value and returns the position of where it was found
-isalnum()	Returns True if all characters in the string are alphanumeric
-isalpha()	Returns True if all characters in the string are in the alphabet
-isascii()	Returns True if all characters in the string are ascii characters
-isdecimal()	Returns True if all characters in the string are decimals
-isdigit()	Returns True if all characters in the string are digits
-isidentifier()	Returns True if the string is an identifier
-islower()	Returns True if all characters in the string are lower case
-isnumeric()	Returns True if all characters in the string are numeric
-isprintable()	Returns True if all characters in the string are printable
-isspace()	Returns True if all characters in the string are whitespaces
-istitle()	Returns True if the string follows the rules of a title
-isupper()	Returns True if all characters in the string are upper case
-join()	Converts the elements of an iterable into a string
-lstrip()	Returns a left trim version of the string
-maketrans()	Returns a translation table to be used in translations
-partition()	Returns a tuple where the string is parted into three parts
-replace()	Returns a string where a specified value is replaced with a specified value
-rfind()	Searches the string for a specified value and returns the last position of where it was found
-rindex()	Searches the string for a specified value and returns the last position of where it was found
-rpartition()	Returns a tuple where the string is parted into three parts
-rsplit()	Splits the string at the specified separator, and returns a list
-rstrip()	Returns a right trim version of the string
-split()	Splits the string at the specified separator, and returns a list
-splitlines()	Splits the string at line breaks and returns a list
-startswith()	Returns true if the string starts with the specified value
-strip()	Returns a trimmed version of the string
-translate()	Returns a translated string
-zfill()	Fills the string with a specified number of 0 values at the beginning
+| Method | Purpose |
+|:------ | :------ |
+|`join()`|Converts the elements of an iterable into a string|
+|`lstrip()`|Returns the string with the leading whitespace characters (spaces, tabs, newlines) removed|
+|`replace()`|Returns a string where a specified value is replaced with a specified value|
+|`rsplit()`|Splits the string at the specified separator from right to left, and returns a list|
+|`rstrip()`|Returns the string with the trailing whitespace characters (spaces, tabs, newlines) removed|
+|`split()`|Splits the string at the specified separator from left to right, and returns a list|
+|`splitlines()`|Splits the string at line breaks and returns a list|
+|`strip()`|Returns a trimmed version of the string with leading a trailing whitespace removed.|
+
+Try them out with this code:
+
+```{literalinclude} ./python_files/string_modify.py
+:linenos:
+```

@@ -245,8 +245,119 @@
 </pre></div>
 </div>
 </section>
-<section id="questioning-properties">
-<h3>Questioning properties<a class="headerlink" href="#questioning-properties" title="Permalink to this heading">#</a></h3>
+<section id="substring-methods">
+<h3>Substring methods<a class="headerlink" href="#substring-methods" title="Permalink to this heading">#</a></h3>
+<p>These methods return information about substrings in the string</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Method</p></th>
+<th class="head text-left"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">count()</span></code></p></td>
+<td class="text-left"><p>Returns the number of times a specified value occurs in a string</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">find()</span></code></p></td>
+<td class="text-left"><p>Searches the string for a specified value and returns the position of where it was found</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">index()</span></code></p></td>
+<td class="text-left"><p>Searches the string for a specified value and returns the position of where it was found</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">rfind()</span></code></p></td>
+<td class="text-left"><p>Searches the string for a specified value and returns the last position of where it was found</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">rindex()</span></code></p></td>
+<td class="text-left"><p>Searches the string for a specified value and returns the last position of where it was found</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Try them out with this code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">sample</span> <span class="o">=</span> <span class="s2">&quot;banna&quot;</span>
+<span class="linenos">2</span>
+<span class="linenos">3</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">count</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">))</span>
+<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">))</span>
+<span class="linenos">5</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">index</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">))</span>
+<span class="linenos">6</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">rfind</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">))</span>
+<span class="linenos">7</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">rindex</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
+</section>
+<section id="string-comparison-methods">
+<h3>String Comparison Methods<a class="headerlink" href="#string-comparison-methods" title="Permalink to this heading">#</a></h3>
+<p>These methods evaluate a string and return a Boolean value</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Method</p></th>
+<th class="head text-left"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">endswith()</span></code></p></td>
+<td class="text-left"><p>Returns true if the string ends with the specified value</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">isalnum()</span></code></p></td>
+<td class="text-left"><p>Returns True if all characters in the string are alphanumeric</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">isalpha()</span></code></p></td>
+<td class="text-left"><p>Returns True if all characters in the string are in the alphabet</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">isascii()</span></code></p></td>
+<td class="text-left"><p>Returns True if all characters in the string are ascii characters</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">isdecimal()</span></code></p></td>
+<td class="text-left"><p>Returns True if all characters in the string are ASCII decimals</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">isdigit()</span></code></p></td>
+<td class="text-left"><p>Returns True if all characters in the string are digits</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">isidentifier()</span></code></p></td>
+<td class="text-left"><p>Returns True if the string is an valid variable name</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">islower()</span></code></p></td>
+<td class="text-left"><p>Returns True if all characters in the string are lower case</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p>``isnumeric()`</p></td>
+<td class="text-left"><p>Returns True if all characters in the string can be used as numbers such as digits, fractions, subscripts, superscripts, Roman numerals, currency numerators etc.</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">isprintable()</span></code></p></td>
+<td class="text-left"><p>Returns True if all characters in the string are printable</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">isspace()</span></code></p></td>
+<td class="text-left"><p>Returns True if all characters in the string are whitespaces</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">istitle()</span></code></p></td>
+<td class="text-left"><p>Returns True if the string follows the rules of a title</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">isupper()</span></code></p></td>
+<td class="text-left"><p>Returns True if all characters in the string are upper case</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">startswith()</span></code></p></td>
+<td class="text-left"><p>Returns true if the string starts with the specified value</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Try them out with this code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Melancholy&quot;</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;ly&quot;</span><span class="p">))</span>
+<span class="linenos"> 2</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;R2D2&quot;</span><span class="o">.</span><span class="n">isalnum</span><span class="p">())</span>
+<span class="linenos"> 3</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;C3PO&quot;</span><span class="o">.</span><span class="n">isalpha</span><span class="p">())</span>
+<span class="linenos"> 4</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;X-wing&quot;</span><span class="o">.</span><span class="n">isascii</span><span class="p">())</span>
+<span class="linenos"> 5</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0456 784 907&quot;</span><span class="o">.</span><span class="n">isdecimal</span><span class="p">())</span>
+<span class="linenos"> 6</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;0345&quot;</span><span class="o">.</span><span class="n">isdigit</span><span class="p">())</span>
+<span class="linenos"> 7</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;first_name&quot;</span><span class="o">.</span><span class="n">isidentifier</span><span class="p">())</span>
+<span class="linenos"> 8</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Juxtaposition&quot;</span><span class="o">.</span><span class="n">islower</span><span class="p">())</span>
+<span class="linenos"> 9</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;45&quot;</span><span class="o">.</span><span class="n">isnumeric</span><span class="p">())</span>
+<span class="linenos">10</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">hello&quot;</span><span class="o">.</span><span class="n">isprintable</span><span class="p">())</span>
+<span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;  &quot;</span><span class="o">.</span><span class="n">isspace</span><span class="p">())</span>
+<span class="linenos">12</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ethereal&quot;</span><span class="o">.</span><span class="n">istitle</span><span class="p">())</span>
+<span class="linenos">13</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Maelstrom&quot;</span><span class="o">.</span><span class="n">isupper</span><span class="p">())</span>
+<span class="linenos">14</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Luminescent&quot;</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;le&quot;</span><span class="p">))</span>
+</pre></div>
+</div>
 </section>
 <section id="justification">
 <h3>Justification<a class="headerlink" href="#justification" title="Permalink to this heading">#</a></h3>
@@ -282,42 +393,63 @@
 <span class="linenos">8</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">rjust</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="s2">&quot;_&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>count()	Returns the number of times a specified value occurs in a string
-encode()	Returns an encoded version of the string
-endswith()	Returns true if the string ends with the specified value
-expandtabs()	Sets the tab size of the string
-find()	Searches the string for a specified value and returns the position of where it was found
-format()	Formats specified values in a string
-format_map()	Formats specified values in a string
-index()	Searches the string for a specified value and returns the position of where it was found
-isalnum()	Returns True if all characters in the string are alphanumeric
-isalpha()	Returns True if all characters in the string are in the alphabet
-isascii()	Returns True if all characters in the string are ascii characters
-isdecimal()	Returns True if all characters in the string are decimals
-isdigit()	Returns True if all characters in the string are digits
-isidentifier()	Returns True if the string is an identifier
-islower()	Returns True if all characters in the string are lower case
-isnumeric()	Returns True if all characters in the string are numeric
-isprintable()	Returns True if all characters in the string are printable
-isspace()	Returns True if all characters in the string are whitespaces
-istitle()	Returns True if the string follows the rules of a title
-isupper()	Returns True if all characters in the string are upper case
-join()	Converts the elements of an iterable into a string
-lstrip()	Returns a left trim version of the string
-maketrans()	Returns a translation table to be used in translations
-partition()	Returns a tuple where the string is parted into three parts
-replace()	Returns a string where a specified value is replaced with a specified value
-rfind()	Searches the string for a specified value and returns the last position of where it was found
-rindex()	Searches the string for a specified value and returns the last position of where it was found
-rpartition()	Returns a tuple where the string is parted into three parts
-rsplit()	Splits the string at the specified separator, and returns a list
-rstrip()	Returns a right trim version of the string
-split()	Splits the string at the specified separator, and returns a list
-splitlines()	Splits the string at line breaks and returns a list
-startswith()	Returns true if the string starts with the specified value
-strip()	Returns a trimmed version of the string
-translate()	Returns a translated string
-zfill()	Fills the string with a specified number of 0 values at the beginning</p>
+</section>
+<section id="modify-string">
+<h3>Modify string<a class="headerlink" href="#modify-string" title="Permalink to this heading">#</a></h3>
+<p>These methods will modify a string</p>
+<div class="table-wrapper colwidths-auto docutils container">
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head text-left"><p>Method</p></th>
+<th class="head text-left"><p>Purpose</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">join()</span></code></p></td>
+<td class="text-left"><p>Converts the elements of an iterable into a string</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">lstrip()</span></code></p></td>
+<td class="text-left"><p>Returns the string with the leading whitespace characters (spaces, tabs, newlines) removed</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">replace()</span></code></p></td>
+<td class="text-left"><p>Returns a string where a specified value is replaced with a specified value</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">rsplit()</span></code></p></td>
+<td class="text-left"><p>Splits the string at the specified separator from right to left, and returns a list</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">rstrip()</span></code></p></td>
+<td class="text-left"><p>Returns the string with the trailing whitespace characters (spaces, tabs, newlines) removed</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">split()</span></code></p></td>
+<td class="text-left"><p>Splits the string at the specified separator from left to right, and returns a list</p></td>
+</tr>
+<tr class="row-even"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">splitlines()</span></code></p></td>
+<td class="text-left"><p>Splits the string at line breaks and returns a list</p></td>
+</tr>
+<tr class="row-odd"><td class="text-left"><p><code class="docutils literal notranslate"><span class="pre">strip()</span></code></p></td>
+<td class="text-left"><p>Returns a trimmed version of the string with leading a trailing whitespace removed.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Try them out with this code:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos"> 1</span><span class="n">sample</span> <span class="o">=</span> <span class="s2">&quot;A long time ago in a galaxy far far away&quot;</span>
+<span class="linenos"> 2</span><span class="n">sample_list</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Use&quot;</span><span class="p">,</span> <span class="s2">&quot;the&quot;</span><span class="p">,</span> <span class="s2">&quot;Force&quot;</span><span class="p">]</span>
+<span class="linenos"> 3</span><span class="n">sample_whitespace</span> <span class="o">=</span> <span class="s2">&quot;    Jawa    &quot;</span>
+<span class="linenos"> 4</span><span class="n">sample_lines</span> <span class="o">=</span> <span class="s2">&quot;Help me Obi Wan Kenobi</span><span class="se">\n</span><span class="s2">You are my only hope&quot;</span>
+<span class="linenos"> 5</span>
+<span class="linenos"> 6</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">sample_list</span><span class="p">))</span>
+<span class="linenos"> 7</span><span class="nb">print</span><span class="p">(</span><span class="n">sample_whitespace</span><span class="o">.</span><span class="n">lstrip</span><span class="p">())</span>
+<span class="linenos"> 8</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Force&quot;</span><span class="p">,</span> <span class="s2">&quot;fork&quot;</span><span class="p">))</span>
+<span class="linenos"> 9</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="linenos">10</span><span class="nb">print</span><span class="p">(</span><span class="n">sample_whitespace</span><span class="o">.</span><span class="n">rstrip</span><span class="p">())</span>
+<span class="linenos">11</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="linenos">12</span><span class="nb">print</span><span class="p">(</span><span class="n">sample</span><span class="o">.</span><span class="n">rsplit</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">))</span>
+<span class="linenos">13</span><span class="nb">print</span><span class="p">(</span><span class="n">sample_lines</span><span class="p">)</span>
+<span class="linenos">14</span><span class="nb">print</span><span class="p">(</span><span class="n">sample_lines</span><span class="o">.</span><span class="n">splitlines</span><span class="p">())</span>
+<span class="linenos">15</span><span class="nb">print</span><span class="p">(</span><span class="n">sample_whitespace</span><span class="o">.</span><span class="n">strip</span><span class="p">())</span>
+</pre></div>
+</div>
 </section>
 </section>
 </section>
@@ -387,8 +519,10 @@ zfill()	Fills the string with a specified number of 0 values at the beginning</p
 <li><a class="reference internal" href="#">Strings</a><ul>
 <li><a class="reference internal" href="#string-methods">String methods</a><ul>
 <li><a class="reference internal" href="#changing-case">Changing case</a></li>
-<li><a class="reference internal" href="#questioning-properties">Questioning properties</a></li>
+<li><a class="reference internal" href="#substring-methods">Substring methods</a></li>
+<li><a class="reference internal" href="#string-comparison-methods">String Comparison Methods</a></li>
 <li><a class="reference internal" href="#justification">Justification</a></li>
+<li><a class="reference internal" href="#modify-string">Modify string</a></li>
 </ul>
 </li>
 </ul>
