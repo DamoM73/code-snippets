@@ -1,5 +1,6 @@
 # Strings
 
+(string-methods)=
 ## String Methods
 
 ### Changing Case Methods
