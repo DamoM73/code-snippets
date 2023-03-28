@@ -3,7 +3,7 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Debugging with Thonny" href="debugging.html" /><link rel="prev" title="Strings" href="strings.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Debugging with Thonny" href="debugging.html" /><link rel="prev" title="File Input Output" href="saving_files.html" />
 
     <link rel="shortcut icon" href="_static/snippets_logo.ico"/><!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
         <title>File Handling - Python Code Snippets</title>
@@ -164,6 +164,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction for Teachers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="strings.html">Strings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="saving_files.html">File Input Output</a></li>
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#">File Handling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="debugging.html">Debugging with Thonny</a></li>
 <li class="toctree-l1"><a class="reference internal" href="licencing.html">Licencing</a></li>
@@ -203,150 +204,25 @@
         <article role="main">
           <section id="file-handling">
 <h1>File Handling<a class="headerlink" href="#file-handling" title="Permalink to this heading">#</a></h1>
-<section id="text-files">
-<h2>Text files<a class="headerlink" href="#text-files" title="Permalink to this heading">#</a></h2>
-<p>Text files are a simple way to save and retrieve data. They have the advantage of being human readable, so you can open a text file and see what has been saved.</p>
-<p>The disadvantage of text files is that everything is save and read as strings. You will need to <a class="reference internal" href="strings.html#string-methods"><span class="std std-ref">String Methods</span></a> and data type converters to change the data back to the format you wish to use.</p>
-<section id="reading-text-files">
-<h3>Reading text files<a class="headerlink" href="#reading-text-files" title="Permalink to this heading">#</a></h3>
-<section id="read-all-the-file">
-<h4>Read all the file<a class="headerlink" href="#read-all-the-file" title="Permalink to this heading">#</a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;python_files\names.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-<span class="linenos">2</span>    <span class="n">data</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="linenos">3</span>    
-<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Note:</p>
+<section id="check-file-exists">
+<h2>Check file exists<a class="headerlink" href="#check-file-exists" title="Permalink to this heading">#</a></h2>
+<p>You can use two methods from the <code class="docutils literal notranslate"><span class="pre">os</span></code> module to check if a file exists</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;python_files\names.txt&quot;</span></code> → path to the text file</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code> → read mode</p></li>
-<li><p>all values read from text files are strings</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">exists()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">isfile()</span></code></p></li>
 </ul>
-</section>
-<section id="read-one-line">
-<h4>Read one line<a class="headerlink" href="#read-one-line" title="Permalink to this heading">#</a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;python_files\names.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-<span class="linenos">2</span>    <span class="n">data</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
-<span class="linenos">3</span>    
-<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Note:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;python_files\names.txt&quot;</span></code> → path to the text file</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code> → read mode</p></li>
-<li><p>all values read from text files are strings</p></li>
-</ul>
-</section>
-<section id="read-a-set-number-of-lines">
-<h4>Read a set number of lines<a class="headerlink" href="#read-a-set-number-of-lines" title="Permalink to this heading">#</a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;python_files\names.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-<span class="linenos">2</span>    <span class="n">data</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">readlines</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
-<span class="linenos">3</span>    
-<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Note:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;python_files\names.txt&quot;</span></code> → path to the text file</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code> → read mode</p></li>
-<li><p>all values read from text files are strings</p></li>
-</ul>
-</section>
-<section id="read-the-file-into-a-list">
-<h4>Read the file into a list<a class="headerlink" href="#read-the-file-into-a-list" title="Permalink to this heading">#</a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;python_files\names.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;r&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-<span class="linenos">2</span>    <span class="n">data</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-<span class="linenos">3</span>    
-<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Note:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;python_files\names.txt&quot;</span></code> → path to the text file</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;r&quot;</span></code> → read mode</p></li>
-<li><p>all values read from text files are strings</p></li>
-</ul>
-</section>
-</section>
-<section id="writing-text-files">
-<h3>Writing text files<a class="headerlink" href="#writing-text-files" title="Permalink to this heading">#</a></h3>
-<p>Writing to a text file will:</p>
-<ul class="simple">
-<li><p>create a new text file if it doesn’t already exist</p></li>
-<li><p>overwrite the text file if it does already exist</p></li>
-</ul>
-<section id="write-a-variable-to-text-file">
-<h4>Write a variable to text file<a class="headerlink" href="#write-a-variable-to-text-file" title="Permalink to this heading">#</a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">value</span> <span class="o">=</span> <span class="s2">&quot;String that will be written to text file&quot;</span>
+<section id="exists">
+<h3><code class="docutils literal notranslate"><span class="pre">exists()</span></code><a class="headerlink" href="#exists" title="Permalink to this heading">#</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">exists()</span></code> method will let you know if either a file or a directory exists.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">os.path</span>
 <span class="linenos">2</span>
-<span class="linenos">3</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;python_files\save_variable.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-<span class="linenos">4</span>    <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+<span class="linenos">3</span><span class="c1"># checks for a file</span>
+<span class="linenos">4</span><span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;./python_files/example.txt&quot;</span><span class="p">))</span>
+<span class="linenos">5</span>
+<span class="linenos">6</span><span class="c1"># checks for a directory</span>
+<span class="linenos">7</span><span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="s2">&quot;./python_files/example_folder&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
-<p>Note:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;python_files\save_file.txt&quot;</span></code> → path to the text file</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;w&quot;</span></code> → write mode</p></li>
-<li><p>all values written to text files are strings</p></li>
-</ul>
-</section>
-<section id="write-a-list-to-text-file">
-<h4>Write a list to text file<a class="headerlink" href="#write-a-list-to-text-file" title="Permalink to this heading">#</a></h4>
-<p>This will write each list element on a new line.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Michelle&quot;</span><span class="p">,</span> <span class="s2">&quot;Nicole&quot;</span><span class="p">,</span> <span class="s2">&quot;Emma&quot;</span><span class="p">,</span> <span class="s2">&quot;Justine&quot;</span><span class="p">,</span> <span class="s2">&quot;Maria&quot;</span><span class="p">]</span>
-<span class="linenos">2</span>
-<span class="linenos">3</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;python_files\save_list.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-<span class="linenos">4</span>    <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">values</span><span class="p">:</span>
-<span class="linenos">5</span>        <span class="n">file</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">item</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Note:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;python_files\save_file.txt&quot;</span></code> → path to the text file</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;w&quot;</span></code> → write mode</p></li>
-<li><p>all values written to text files are strings</p></li>
-</ul>
-</section>
-</section>
-</section>
-<section id="pickle-files">
-<h2>Pickle files<a class="headerlink" href="#pickle-files" title="Permalink to this heading">#</a></h2>
-<p>Python’s pickle module saves Python objects as binary files. This may seem limiting but remember that <strong>everything in Python is an object</strong>.</p>
-<p>The advantage of using pickle to save is the object type is preserved. For example, if you save a dictionary, it will return as a dictionary when you load it.</p>
-<p>The disadvantage of pickling is that the save file is in binary, so it is not human readable. You cannot open the file to see what has been saved.</p>
-<section id="save-a-file-pickling">
-<h3>Save a file (pickling)<a class="headerlink" href="#save-a-file-pickling" title="Permalink to this heading">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">pickle</span>
-<span class="linenos">2</span>
-<span class="linenos">3</span><span class="n">values</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Michelle&quot;</span><span class="p">,</span> <span class="s2">&quot;Nicole&quot;</span><span class="p">,</span> <span class="s2">&quot;Emma&quot;</span><span class="p">,</span> <span class="s2">&quot;Justine&quot;</span><span class="p">,</span> <span class="s2">&quot;Maria&quot;</span><span class="p">]</span>
-<span class="linenos">4</span>
-<span class="linenos">5</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;python_files/save_file.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-<span class="linenos">6</span>    <span class="n">pickle</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">values</span><span class="p">,</span> <span class="n">file</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Note:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;python_files/save_file.pkl&quot;</span></code> → the path to the pickle file</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">wb</span></code> → the file needs to write binary</p></li>
-</ul>
-</section>
-<section id="read-a-file-unpickle">
-<h3>Read a file (unpickle)<a class="headerlink" href="#read-a-file-unpickle" title="Permalink to this heading">#</a></h3>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">pickle</span>
-<span class="linenos">2</span>
-<span class="linenos">3</span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;python_files\save_file.pkl&quot;</span><span class="p">,</span> <span class="s2">&quot;rb&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
-<span class="linenos">4</span>    <span class="n">values</span> <span class="o">=</span> <span class="n">pickle</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
-<span class="linenos">5</span>    
-<span class="linenos">6</span><span class="nb">print</span><span class="p">(</span><span class="n">values</span><span class="p">)</span>
-</pre></div>
-</div>
-<p>Note:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">&quot;python_files/save_file.pkl&quot;</span></code> → the path to the pickle file</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rb</span></code> → the file needs to read binary</p></li>
-</ul>
 </section>
 </section>
 </section>
@@ -365,14 +241,14 @@
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          <a class="prev-page" href="strings.html">
+          <a class="prev-page" href="saving_files.html">
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
                   <span>Previous</span>
                 </div>
                 
-                <div class="title">Strings</div>
+                <div class="title">File Input Output</div>
                 
               </div>
             </a>
@@ -389,7 +265,7 @@
           </div>
           <div class="right-details">
             <div class="icons">
-              <a class="muted-link " href="https://github.com/DamoM73/turtle-introduction-to-python" aria-label="GitHub">
+              <a class="muted-link " href="https://github.com/DamoM73/code-snippets" aria-label="GitHub">
                 <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
                 </svg>
@@ -414,24 +290,8 @@
           <div class="toc-tree">
             <ul>
 <li><a class="reference internal" href="#">File Handling</a><ul>
-<li><a class="reference internal" href="#text-files">Text files</a><ul>
-<li><a class="reference internal" href="#reading-text-files">Reading text files</a><ul>
-<li><a class="reference internal" href="#read-all-the-file">Read all the file</a></li>
-<li><a class="reference internal" href="#read-one-line">Read one line</a></li>
-<li><a class="reference internal" href="#read-a-set-number-of-lines">Read a set number of lines</a></li>
-<li><a class="reference internal" href="#read-the-file-into-a-list">Read the file into a list</a></li>
-</ul>
-</li>
-<li><a class="reference internal" href="#writing-text-files">Writing text files</a><ul>
-<li><a class="reference internal" href="#write-a-variable-to-text-file">Write a variable to text file</a></li>
-<li><a class="reference internal" href="#write-a-list-to-text-file">Write a list to text file</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a class="reference internal" href="#pickle-files">Pickle files</a><ul>
-<li><a class="reference internal" href="#save-a-file-pickling">Save a file (pickling)</a></li>
-<li><a class="reference internal" href="#read-a-file-unpickle">Read a file (unpickle)</a></li>
+<li><a class="reference internal" href="#check-file-exists">Check file exists</a><ul>
+<li><a class="reference internal" href="#exists"><code class="docutils literal notranslate"><span class="pre">exists()</span></code></a></li>
 </ul>
 </li>
 </ul>
