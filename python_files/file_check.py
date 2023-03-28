@@ -1,4 +1,4 @@
-import os.path
+import os
 
 # checks for a file
 print(os.path.isfile("./python_files/example.txt"))
