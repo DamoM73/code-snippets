@@ -7,3 +7,5 @@
     - [ ] CSV files
       - [ ] Opening CVS files
       - [ ] Reading CSV files
+- [ ] Database
+  - [ ] Hash passwords
