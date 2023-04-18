@@ -9,3 +9,7 @@
       - [ ] Reading CSV files
 - [ ] Database
   - [ ] Hash passwords
+- [ ] Time
+  - [ ] Get current time
+  - [ ] Time something
+  - [ ] Display time
