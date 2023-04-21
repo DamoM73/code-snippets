@@ -10,6 +10,7 @@ introduction
 strings
 saving_files
 file_handling
+ide
 debugging
 licencing
 ```

@@ -1,15 +1,21 @@
+# To Do
+
 - [ ] Lists
-    - [ ] getting random list element
+  - [ ] getting random list element
 - [ ] Files
-    - [ ] Text Files
-      - [ ] Opening text files
-      - [ ] Reading text files
-    - [ ] CSV files
-      - [ ] Opening CVS files
-      - [ ] Reading CSV files
+  - [ ] CSV files
+    - [ ] Opening CVS files
+    - [ ] Reading CSV files
 - [ ] Database
   - [ ] Hash passwords
 - [ ] Time
   - [ ] Get current time
   - [ ] Time something
   - [ ] Display time
+- [ ] IDEs
+  - [ ] Virtual Environments
+    - [ ] Thonny
+    - [ ] VSC
+  - [ ] pip install
+    - [ ] Thonny
+    - [ ] VSC
