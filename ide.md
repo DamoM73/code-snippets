@@ -19,7 +19,7 @@ In the terminal type, ensure that you are in your folder directory (it's in the 
 python -m venv .venv
 ```
 
-**macOs**
+**macOS**
 
 ```
 python3 -m venv .venv
@@ -43,7 +43,7 @@ The first time you run this command you may get an execution policy error.
 
 **[Follow these instructions](https://www.stanleyulili.com/powershell/solution-to-running-scripts-is-disabled-on-this-system-error-on-powershell/)** to resolve this problem.
 
-**macOs**
+**macOS**
 
 ```
 source venv/bin/activate
@@ -53,12 +53,18 @@ source venv/bin/activate
 
 In VSCode we use pip to install packages.
 
-The example pack we will install is PyQt6. 
+The example package we will install is PyQt6. 
 
 **Windows**
 
 ```
+python -m pip install PyQt6
+```
 
+**macOS**
+
+```
+pip3 install PyQt6
 ```
 
 ## Thonny

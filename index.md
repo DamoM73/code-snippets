@@ -7,9 +7,10 @@ This website provides a selection of code snippets to incorporate into your Pyth
 :caption: "Contents:"
 
 introduction
+file_handling
 strings
 saving_files
-file_handling
+time
 ide
 debugging
 licencing
