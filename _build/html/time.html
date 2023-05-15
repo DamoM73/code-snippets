@@ -206,8 +206,16 @@
         <article role="main">
           <section id="time">
 <h1>Time<a class="headerlink" href="#time" title="Permalink to this heading">#</a></h1>
+<p>Time in Python is recorded in seconds. Any given time is recorded as the number of seconds since 1st January 1970 (referred at as the epoch).</p>
+<p>We will use two different libraries to deal with time:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://docs.python.org/3/library/time.html">time</a></p></li>
+<li><p><a class="reference external" href="https://docs.python.org/3/library/datetime.html">datetime</a></p></li>
+</ul>
+<p>Both are part of the standard library that comes packaged with Python.</p>
 <section id="pausing">
 <h2>Pausing<a class="headerlink" href="#pausing" title="Permalink to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">sleep</span></code> method pauses the program calculation and waits. The argument passes the wait time in seconds.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
 <span class="linenos">2</span>
 <span class="linenos">3</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Started&quot;</span><span class="p">)</span>
@@ -217,9 +225,11 @@
 <span class="linenos">7</span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Two seconds later&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<p>For more information check <strong><a class="reference external" href="https://www.freecodecamp.org/news/python-sleep-time-sleep-in-python/">this freeCOdeCamp article</a></strong>.</p>
 </section>
 <section id="current-time">
 <h2>Current time<a class="headerlink" href="#current-time" title="Permalink to this heading">#</a></h2>
+<p>The <code class="docutils literal notranslate"><span class="pre">now</span></code> method returns the current local date and time. We also use the <code class="docutils literal notranslate"><span class="pre">strftime</span></code> method to format the date. There are many <strong><a class="reference external" href="https://docs.python.org/3/library/datetime.html?highlight=now#strftime-and-strptime-format-codes">formatting codes</a></strong>.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 <span class="linenos">2</span>
 <span class="linenos">3</span><span class="n">now</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
@@ -231,9 +241,21 @@
 <span class="linenos">9</span><span class="nb">print</span><span class="p">(</span><span class="n">now</span><span class="o">.</span><span class="n">strftime</span><span class="p">(</span><span class="s2">&quot;%I:%M:%S %p&quot;</span><span class="p">))</span>
 </pre></div>
 </div>
+<p>For more information check <strong><a class="reference external" href="https://www.freecodecamp.org/news/python-datetime-now-how-to-get-todays-date-and-time/">this freeCodeCamp artilce</a></strong></p>
 </section>
 <section id="current-date">
 <h2>Current date<a class="headerlink" href="#current-date" title="Permalink to this heading">#</a></h2>
+<p>Both <code class="docutils literal notranslate"><span class="pre">today</span></code> will return today’s date, while <code class="docutils literal notranslate"><span class="pre">now</span></code> will return today’s date and time.</p>
+<p>The return objects can be refined by using the dot notation asking for the:</p>
+<ul class="simple">
+<li><p>year</p></li>
+<li><p>month</p></li>
+<li><p>day</p></li>
+<li><p>hour</p></li>
+<li><p>minute</p></li>
+<li><p>second</p></li>
+<li><p>microsecond</p></li>
+</ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span>
 <span class="linenos">2</span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 <span class="linenos">3</span>
@@ -248,6 +270,7 @@
 </section>
 <section id="calculate-elapsed-time">
 <h2>Calculate elapsed time<a class="headerlink" href="#calculate-elapsed-time" title="Permalink to this heading">#</a></h2>
+<p>Since time is recorded in seconds, can perform calculations between two times.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="linenos">1</span><span class="kn">import</span> <span class="nn">time</span>
 <span class="linenos">2</span>
 <span class="linenos">3</span><span class="n">start</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">perf_counter</span><span class="p">()</span>
