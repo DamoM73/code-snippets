@@ -19,3 +19,6 @@
   - [ ] pip install
     - [ ] Thonny
     - [ ] VSC
+- [ ] Algorithms
+  - [ ] sort
+  - [ ] search
