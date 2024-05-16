@@ -11,6 +11,7 @@ file_handling
 strings
 saving_files
 time
+pyqt
 ide
 debugging
 licencing
