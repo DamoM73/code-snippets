@@ -12,7 +12,7 @@ strings
 saving_files
 time
 pyqt
-ide
+state_machines
 debugging
 licencing
 ```
